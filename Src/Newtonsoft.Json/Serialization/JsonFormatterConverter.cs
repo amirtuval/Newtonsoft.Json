@@ -47,8 +47,10 @@ namespace Newtonsoft.Json.Serialization
         {
             ValidationUtils.ArgumentNotNull(value, "value");
 
-            JValue v = (JValue)value;
-            return (T)System.Convert.ChangeType(v.Value, typeof(T), CultureInfo.InvariantCulture);
+            if (value is JValue)
+                value = ((JValue)value).Value;
+
+            return (T)System.Convert.ChangeType(value, typeof(T), CultureInfo.InvariantCulture);
         }
 
         public object Convert(object value, Type type)
