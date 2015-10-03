@@ -6,10 +6,10 @@ using Newtonsoft.Json.Utilities.LinqBridge;
 using System.Linq;
 #endif
 using System.Text;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.Modified.Json.Linq;
 using NUnit.Framework;
 
-namespace Newtonsoft.Json.Tests.Linq
+namespace Newtonsoft.Modified.Json.Tests.Linq
 {
     [TestFixture]
     public class MergeTests : TestFixtureBase

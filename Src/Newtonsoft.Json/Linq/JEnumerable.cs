@@ -29,10 +29,10 @@ using Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
-using Newtonsoft.Json.Utilities;
 using System.Collections;
+using Newtonsoft.Modified.Json.Utilities;
 
-namespace Newtonsoft.Json.Linq
+namespace Newtonsoft.Modified.Json.Linq
 {
     /// <summary>
     /// Represents a collection of <see cref="JToken"/> objects.

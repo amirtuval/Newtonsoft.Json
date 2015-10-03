@@ -27,10 +27,10 @@
 using System;
 using System.Data.SqlTypes;
 using System.Globalization;
-using Newtonsoft.Json.Utilities;
 using System.Collections.Generic;
+using Newtonsoft.Modified.Json.Utilities;
 
-namespace Newtonsoft.Json.Converters
+namespace Newtonsoft.Modified.Json.Converters
 {
     /// <summary>
     /// Converts a binary value to and from a base 64 string value.

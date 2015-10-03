@@ -39,9 +39,9 @@ using Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
-using Newtonsoft.Json.Serialization;
+using Newtonsoft.Modified.Json.Serialization;
 
-namespace Newtonsoft.Json.Utilities
+namespace Newtonsoft.Modified.Json.Utilities
 {
 #if (NETFX_CORE || PORTABLE || PORTABLE40)
     internal enum MemberTypes

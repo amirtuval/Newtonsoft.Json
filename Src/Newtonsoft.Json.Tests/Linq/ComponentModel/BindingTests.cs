@@ -26,9 +26,9 @@
 #if !(NETFX_CORE || PORTABLE || PORTABLE40)
 using NUnit.Framework;
 using System.Web.UI;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.Modified.Json.Linq;
 
-namespace Newtonsoft.Json.Tests.Linq.ComponentModel
+namespace Newtonsoft.Modified.Json.Tests.Linq.ComponentModel
 {
     [TestFixture]
     public class BindingTests : TestFixtureBase

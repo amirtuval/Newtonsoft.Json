@@ -35,9 +35,9 @@ using Newtonsoft.Json.Utilities.LinqBridge;
 using System.Linq;
 #endif
 using System.Globalization;
-using Newtonsoft.Json.Serialization;
+using Newtonsoft.Modified.Json.Serialization;
 
-namespace Newtonsoft.Json.Utilities
+namespace Newtonsoft.Modified.Json.Utilities
 {
     internal static class CollectionUtils
     {

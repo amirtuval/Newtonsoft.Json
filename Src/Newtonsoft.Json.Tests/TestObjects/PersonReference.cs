@@ -26,7 +26,7 @@
 using System;
 using System.Text;
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace Newtonsoft.Modified.Json.Tests.TestObjects
 {
     public class PersonReference
     {

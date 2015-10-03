@@ -24,14 +24,14 @@
 #endregion
 
 using System;
-using Newtonsoft.Json.Serialization;
 using System.Reflection;
+using Newtonsoft.Modified.Json.Serialization;
 
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #endif
 
-namespace Newtonsoft.Json.Utilities
+namespace Newtonsoft.Modified.Json.Utilities
 {
     internal class LateBoundReflectionDelegateFactory : ReflectionDelegateFactory
     {

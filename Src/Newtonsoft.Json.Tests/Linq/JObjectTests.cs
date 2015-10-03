@@ -30,8 +30,6 @@ using System.ComponentModel;
 #if !(NET20 || NET35 || PORTABLE)
 using System.Numerics;
 #endif
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
 #if !NETFX_CORE
 using NUnit.Framework;
 #else
@@ -39,7 +37,6 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Linq;
 using System.IO;
 using System.Collections;
 #if !NETFX_CORE
@@ -50,9 +47,12 @@ using Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Linq;
+using Newtonsoft.Modified.Json.Serialization;
+using Newtonsoft.Modified.Json.Tests.TestObjects;
+using Newtonsoft.Modified.Json.Utilities;
 
-namespace Newtonsoft.Json.Tests.Linq
+namespace Newtonsoft.Modified.Json.Tests.Linq
 {
     [TestFixture]
     public class JObjectTests : TestFixtureBase

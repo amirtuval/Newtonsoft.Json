@@ -31,9 +31,9 @@ using System.Dynamic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Utilities;
 
-namespace Newtonsoft.Json.Converters
+namespace Newtonsoft.Modified.Json.Converters
 {
     /// <summary>
     /// Converts an ExpandoObject to and from JSON.

@@ -40,9 +40,9 @@ using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAtt
 #if !(NETFX_CORE || NET20)
 using System.Runtime.Serialization.Json;
 #endif
-using Newtonsoft.Json.Serialization;
+using Newtonsoft.Modified.Json.Serialization;
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace Newtonsoft.Modified.Json.Tests.Serialization
 {
     [TestFixture]
     public class WebApiIntegrationTests : TestFixtureBase

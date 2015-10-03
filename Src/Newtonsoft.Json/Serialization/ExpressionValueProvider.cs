@@ -31,10 +31,10 @@ using Newtonsoft.Json.Utilities.LinqBridge;
 #endif
 using System.Text;
 using System.Reflection;
-using Newtonsoft.Json.Utilities;
 using System.Globalization;
+using Newtonsoft.Modified.Json.Utilities;
 
-namespace Newtonsoft.Json.Serialization
+namespace Newtonsoft.Modified.Json.Serialization
 {
     /// <summary>
     /// Get and set values for a <see cref="MemberInfo"/> using dynamic methods.

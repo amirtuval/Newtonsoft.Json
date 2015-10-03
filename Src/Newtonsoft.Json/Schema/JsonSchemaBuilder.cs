@@ -25,17 +25,17 @@
 
 using System;
 using System.Collections.Generic;
-using Newtonsoft.Json.Serialization;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
 using System.Globalization;
-using Newtonsoft.Json.Utilities;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.Modified.Json.Utilities;
+using Newtonsoft.Modified.Json.Linq;
+using Newtonsoft.Modified.Json.Serialization;
 
-namespace Newtonsoft.Json.Schema
+namespace Newtonsoft.Modified.Json.Schema
 {
     internal class JsonSchemaBuilder
     {

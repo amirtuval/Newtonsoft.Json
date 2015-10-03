@@ -28,9 +28,9 @@ using System.Globalization;
 #if !(NET20 || NET35 || PORTABLE40 || PORTABLE)
 using System.Numerics;
 #endif
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Utilities;
 
-namespace Newtonsoft.Json.Linq
+namespace Newtonsoft.Modified.Json.Linq
 {
     /// <summary>
     /// Represents a writer that provides a fast, non-cached, forward-only way of generating Json data.

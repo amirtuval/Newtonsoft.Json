@@ -27,9 +27,9 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters;
 using System.Text;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Tests.TestObjects;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Linq;
+using Newtonsoft.Modified.Json.Tests.TestObjects;
+using Newtonsoft.Modified.Json.Utilities;
 #if !NETFX_CORE
 using NUnit.Framework;
 #else
@@ -38,7 +38,7 @@ using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestCl
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace Newtonsoft.Modified.Json.Tests.Serialization
 {
     [TestFixture]
     public class MetadataPropertyHandlingTests : TestFixtureBase

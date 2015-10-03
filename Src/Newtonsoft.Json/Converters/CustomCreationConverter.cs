@@ -24,9 +24,9 @@
 #endregion
 
 using System;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Utilities;
 
-namespace Newtonsoft.Json.Converters
+namespace Newtonsoft.Modified.Json.Converters
 {
     /// <summary>
     /// Create a custom object

@@ -32,8 +32,6 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Linq;
 #if !NETFX_CORE
 using NUnit.Framework;
 #else
@@ -41,13 +39,15 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Utilities;
 using System.Globalization;
-using ErrorEventArgs = Newtonsoft.Json.Serialization.ErrorEventArgs;
+using Newtonsoft.Modified.Json.Converters;
+using Newtonsoft.Modified.Json.Linq;
+using Newtonsoft.Modified.Json.Serialization;
+using Newtonsoft.Modified.Json.Tests.TestObjects;
+using ErrorEventArgs = Newtonsoft.Modified.Json.Serialization.ErrorEventArgs;
 
-namespace Newtonsoft.Json.Tests.Documentation
+namespace Newtonsoft.Modified.Json.Tests.Documentation
 {
     public class SerializationTests
     {
@@ -231,7 +231,7 @@ namespace Newtonsoft.Json.Tests.Documentation
                 ]",
                 new JsonSerializerSettings
                 {
-                    Error = delegate(object sender, ErrorEventArgs args)
+                    Error = delegate(object sender, Json.Serialization.ErrorEventArgs args)
                     {
                         errors.Add(args.ErrorContext.Error.Message);
                         args.ErrorContext.Handled = true;
@@ -255,7 +255,7 @@ namespace Newtonsoft.Json.Tests.Documentation
             List<string> errors = new List<string>();
 
             JsonSerializer serializer = new JsonSerializer();
-            serializer.Error += delegate(object sender, ErrorEventArgs args)
+            serializer.Error += delegate(object sender, Json.Serialization.ErrorEventArgs args)
             {
                 // only log an error once
                 if (args.CurrentObject == args.ErrorContext.OriginalObject)

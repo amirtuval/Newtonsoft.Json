@@ -27,9 +27,9 @@ using System;
 using System.Globalization;
 using System.ComponentModel;
 using System.Collections.Generic;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Utilities;
-using Newtonsoft.Json.Serialization;
+using Newtonsoft.Modified.Json.Linq;
+using Newtonsoft.Modified.Json.Serialization;
+using Newtonsoft.Modified.Json.Utilities;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
@@ -37,7 +37,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Schema
+namespace Newtonsoft.Modified.Json.Schema
 {
     /// <summary>
     /// Generates a <see cref="JsonSchema"/> from a specified <see cref="Type"/>.

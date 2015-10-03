@@ -1,10 +1,10 @@
-﻿using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Newtonsoft.Modified.Json.Linq;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Linq
+namespace Newtonsoft.Modified.Json.Tests.Documentation.Samples.Linq
 {
     public class QueryJson
     {

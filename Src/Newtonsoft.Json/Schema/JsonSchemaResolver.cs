@@ -32,7 +32,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Schema
+namespace Newtonsoft.Modified.Json.Schema
 {
     /// <summary>
     /// Resolves <see cref="JsonSchema"/> from an id.

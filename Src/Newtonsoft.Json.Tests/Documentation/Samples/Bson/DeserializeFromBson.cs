@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using Newtonsoft.Json.Bson;
+using Newtonsoft.Modified.Json.Bson;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Bson
+namespace Newtonsoft.Modified.Json.Tests.Documentation.Samples.Bson
 {
     public class DeserializeFromBson
     {

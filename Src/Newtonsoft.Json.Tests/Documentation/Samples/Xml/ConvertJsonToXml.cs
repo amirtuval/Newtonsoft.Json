@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Linq;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Xml
+namespace Newtonsoft.Modified.Json.Tests.Documentation.Samples.Xml
 {
     public class ConvertJsonToXml
     {

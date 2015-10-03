@@ -49,25 +49,36 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json;
+using Newtonsoft.Modified.Json;
 using System.IO;
 using System.Collections;
 using System.Xml;
 using System.Xml.Serialization;
 using System.Collections.ObjectModel;
-using Newtonsoft.Json.Bson;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Converters;
 #if !NET20
 using System.Runtime.Serialization.Json;
 #endif
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.Linq;
-using Newtonsoft.Json.Tests.TestObjects;
 using System.Runtime.Serialization;
 using System.Globalization;
-using Newtonsoft.Json.Utilities;
 using System.Reflection;
+using Newtonsoft.Modified.Json.Bson;
+using Newtonsoft.Modified.Json.Converters;
+using Newtonsoft.Modified.Json.Linq;
+using Newtonsoft.Modified.Json.Serialization;
+using Newtonsoft.Modified.Json.Tests.Linq;
+using Newtonsoft.Modified.Json.Tests.TestObjects;
+using Newtonsoft.Modified.Json.Utilities;
+using BadJsonPropertyClass = Newtonsoft.Modified.Json.Tests.TestObjects.BadJsonPropertyClass;
+using ErrorEventArgs = Newtonsoft.Modified.Json.Serialization.ErrorEventArgs;
+using GetOnlyPropertyClass = Newtonsoft.Modified.Json.Tests.TestObjects.GetOnlyPropertyClass;
+using IdReferenceResolver = Newtonsoft.Modified.Json.Tests.TestObjects.IdReferenceResolver;
+using JsonIgnoreAttributeTestClass = Newtonsoft.Modified.Json.Tests.TestObjects.JsonIgnoreAttributeTestClass;
+using JsonPropertyClass = Newtonsoft.Modified.Json.Tests.TestObjects.JsonPropertyClass;
+using MethodExecutorObject = Newtonsoft.Modified.Json.Tests.TestObjects.MethodExecutorObject;
+using Ratio = Newtonsoft.Modified.Json.Tests.TestObjects.Ratio;
+using SetOnlyPropertyClass = Newtonsoft.Modified.Json.Tests.TestObjects.SetOnlyPropertyClass;
+using Store = Newtonsoft.Modified.Json.Tests.TestObjects.Store;
+using TypedSubHashtable = Newtonsoft.Modified.Json.Tests.TestObjects.TypedSubHashtable;
 #if !NET20
 using System.Xml.Linq;
 using System.Collections.Specialized;
@@ -86,7 +97,7 @@ using System.Drawing;
 using System.Diagnostics;
 #endif
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace Newtonsoft.Modified.Json.Tests.Serialization
 {
     [TestFixture]
     public class JsonSerializerTest : TestFixtureBase
@@ -1083,7 +1094,7 @@ namespace Newtonsoft.Json.Tests.Serialization
         [Test]
         public void TypedObjectDeserialization()
         {
-            Product product = new Product();
+            TestObjects.Product product = new TestObjects.Product();
 
             product.Name = "Apple";
             product.ExpiryDate = new DateTime(2008, 12, 28);
@@ -1102,7 +1113,7 @@ namespace Newtonsoft.Json.Tests.Serialization
             //  ]
             //}
 
-            Product deserializedProduct = (Product)JsonConvert.DeserializeObject(output, typeof(Product));
+            TestObjects.Product deserializedProduct = (TestObjects.Product)JsonConvert.DeserializeObject(output, typeof(TestObjects.Product));
 
             Assert.AreEqual("Apple", deserializedProduct.Name);
             Assert.AreEqual(new DateTime(2008, 12, 28), deserializedProduct.ExpiryDate);
@@ -1135,7 +1146,7 @@ namespace Newtonsoft.Json.Tests.Serialization
         {
             string value = @"{""Name"":""Orange"", ""Price"":3.99, ""ExpiryDate"":""01/24/2010 12:00:00""}";
 
-            Product p = JsonConvert.DeserializeObject(value, typeof(Product)) as Product;
+            TestObjects.Product p = JsonConvert.DeserializeObject(value, typeof(TestObjects.Product)) as TestObjects.Product;
 
             Assert.AreEqual("Orange", p.Name);
             Assert.AreEqual(new DateTime(2010, 1, 24, 12, 0, 0), p.ExpiryDate);
@@ -1505,7 +1516,7 @@ keyword such as type of business.""
                     IntValue = int.MaxValue,
                     NestedAnonymous = new { NestedValue = byte.MaxValue },
                     NestedArray = new[] { 1, 2 },
-                    Product = new Product() { Name = "TestProduct" }
+                    Product = new TestObjects.Product() { Name = "TestProduct" }
                 };
 
             string json = JsonConvert.SerializeObject(anonymous);
@@ -6531,7 +6542,7 @@ Parameter name: value",
             string json = "{}";
             IList<string> errors = new List<string>();
 
-            EventHandler<Newtonsoft.Json.Serialization.ErrorEventArgs> error = (s, e) =>
+            EventHandler<ErrorEventArgs> error = (s, e) =>
             {
                 errors.Add(e.ErrorContext.Error.Message);
                 e.ErrorContext.Handled = true;
@@ -6556,7 +6567,7 @@ Parameter name: value",
             string json = "{'NonAttributeProperty':null,'UnsetProperty':null,'AllowNullProperty':null,'AlwaysProperty':null}";
             IList<string> errors = new List<string>();
 
-            EventHandler<Newtonsoft.Json.Serialization.ErrorEventArgs> error = (s, e) =>
+            EventHandler<ErrorEventArgs> error = (s, e) =>
             {
                 errors.Add(e.ErrorContext.Error.Message);
                 e.ErrorContext.Handled = true;
@@ -6579,7 +6590,7 @@ Parameter name: value",
         {
             IList<string> errors = new List<string>();
 
-            EventHandler<Newtonsoft.Json.Serialization.ErrorEventArgs> error = (s, e) =>
+            EventHandler<ErrorEventArgs> error = (s, e) =>
             {
                 errors.Add(e.ErrorContext.Error.Message);
                 e.ErrorContext.Handled = true;
@@ -6771,7 +6782,7 @@ Parameter name: value",
             where T : class
         {
             var stringWriter = new StringWriter();
-            var serializer = new Newtonsoft.Json.JsonSerializer();
+            var serializer = new JsonSerializer();
             serializer.ContractResolver = new DefaultContractResolver(false)
             {
                 IgnoreSerializableAttribute = false
@@ -6784,8 +6795,8 @@ Parameter name: value",
         private T Deserialize<T>(string json)
             where T : class
         {
-            var jsonReader = new Newtonsoft.Json.JsonTextReader(new StringReader(json));
-            var serializer = new Newtonsoft.Json.JsonSerializer();
+            var jsonReader = new JsonTextReader(new StringReader(json));
+            var serializer = new JsonSerializer();
             serializer.ContractResolver = new DefaultContractResolver(false)
             {
                 IgnoreSerializableAttribute = false

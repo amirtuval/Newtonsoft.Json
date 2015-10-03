@@ -26,7 +26,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using Newtonsoft.Json.Tests.TestObjects;
 #if !(NET20 || NET35 || PORTABLE)
 using System.Numerics;
 #endif
@@ -38,16 +37,17 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Linq;
 using System.Globalization;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
-using Newtonsoft.Json.Tests.Serialization;
+using Newtonsoft.Modified.Json.Tests.Serialization;
+using Newtonsoft.Modified.Json.Linq;
+using Newtonsoft.Modified.Json.Tests.TestObjects;
 
-namespace Newtonsoft.Json.Tests.Linq
+namespace Newtonsoft.Modified.Json.Tests.Linq
 {
     [TestFixture]
     public class JValueTests : TestFixtureBase

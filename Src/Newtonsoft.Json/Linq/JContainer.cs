@@ -29,10 +29,10 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 #endif
 using System.Threading;
-using Newtonsoft.Json.Utilities;
 using System.Collections;
 using System.Globalization;
 using System.ComponentModel;
+using Newtonsoft.Modified.Json.Utilities;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
@@ -40,7 +40,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Linq
+namespace Newtonsoft.Modified.Json.Linq
 {
     /// <summary>
     /// Represents a token that can contain other tokens.

@@ -28,8 +28,8 @@ using System.Collections.Generic;
 #if !(PORTABLE || PORTABLE40 || NET35 || NET20)
 using System.Numerics;
 #endif
-using Newtonsoft.Json.Linq.JsonPath;
-using Newtonsoft.Json.Tests.Bson;
+using Newtonsoft.Modified.Json.Linq.JsonPath;
+using Newtonsoft.Modified.Json.Tests.Bson;
 #if !NETFX_CORE
 using NUnit.Framework;
 #else
@@ -37,7 +37,7 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Linq;
+using Newtonsoft.Modified.Json.Linq;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
@@ -45,7 +45,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Linq.JsonPath
+namespace Newtonsoft.Modified.Json.Tests.Linq.JsonPath
 {
     [TestFixture]
     public class JPathExecuteTests : TestFixtureBase

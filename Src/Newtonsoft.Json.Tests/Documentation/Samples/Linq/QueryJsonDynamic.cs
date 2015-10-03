@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.Modified.Json.Linq;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Linq
+namespace Newtonsoft.Modified.Json.Tests.Documentation.Samples.Linq
 {
     public class QueryJsonDynamic
     {

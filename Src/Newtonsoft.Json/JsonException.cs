@@ -28,9 +28,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Runtime.Serialization;
 using System.Text;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Utilities;
 
-namespace Newtonsoft.Json
+namespace Newtonsoft.Modified.Json
 {
     /// <summary>
     /// The exception thrown when an error occurs during Json serialization or deserialization.

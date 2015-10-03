@@ -39,13 +39,13 @@ using Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 #endif
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
 using System.Reflection;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Utilities;
 using System.Globalization;
+using Newtonsoft.Modified.Json.Serialization;
+using Newtonsoft.Modified.Json.Tests.TestObjects;
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace Newtonsoft.Modified.Json.Tests.Serialization
 {
     public class DynamicContractResolver : DefaultContractResolver
     {

@@ -35,7 +35,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Utilities
+namespace Newtonsoft.Modified.Json.Utilities
 {
     internal interface IWrappedCollection : IList
     {

@@ -34,12 +34,12 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Utilities;
-using Newtonsoft.Json.Tests.TestObjects;
-using Newtonsoft.Json.Tests.Serialization;
+using Newtonsoft.Modified.Json.Serialization;
+using Newtonsoft.Modified.Json.Tests.Serialization;
+using Newtonsoft.Modified.Json.Tests.TestObjects;
+using Newtonsoft.Modified.Json.Utilities;
 
-namespace Newtonsoft.Json.Tests.Utilities
+namespace Newtonsoft.Modified.Json.Tests.Utilities
 {
     [TestFixture]
     public class DynamicReflectionDelegateFactoryTests : TestFixtureBase

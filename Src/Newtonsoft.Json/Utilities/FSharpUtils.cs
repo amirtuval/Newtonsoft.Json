@@ -24,15 +24,15 @@
 #endregion
 
 using System.Threading;
+using Newtonsoft.Modified.Json.Serialization;
 #if !(NET35 || NET20 || NETFX_CORE)
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using Newtonsoft.Json.Serialization;
 
-namespace Newtonsoft.Json.Utilities
+namespace Newtonsoft.Modified.Json.Utilities
 {
     internal static class FSharpUtils
     {

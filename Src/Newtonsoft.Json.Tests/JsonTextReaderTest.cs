@@ -26,7 +26,6 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using Newtonsoft.Json.Linq;
 #if !(NET20 || NET35 || PORTABLE40 || PORTABLE)
 using System.Numerics;
 #endif
@@ -38,12 +37,13 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json;
+using Newtonsoft.Modified.Json;
 using System.IO;
 using System.Xml;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Linq;
+using Newtonsoft.Modified.Json.Utilities;
 
-namespace Newtonsoft.Json.Tests
+namespace Newtonsoft.Modified.Json.Tests
 {
     [TestFixture]
     public class JsonTextReaderTest : TestFixtureBase

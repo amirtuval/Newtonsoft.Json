@@ -25,7 +25,7 @@
 
 using System;
 
-namespace Newtonsoft.Json
+namespace Newtonsoft.Modified.Json
 {
     /// <summary>
     /// Specifies type name handling options for the <see cref="JsonSerializer"/>.

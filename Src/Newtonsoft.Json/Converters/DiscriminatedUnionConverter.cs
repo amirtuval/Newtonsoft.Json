@@ -34,11 +34,11 @@ using Newtonsoft.Json.Utilities.LinqBridge;
 using System.Linq;
 #endif
 using System.Reflection;
-using Newtonsoft.Json.Serialization;
 using System.Globalization;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Serialization;
+using Newtonsoft.Modified.Json.Utilities;
 
-namespace Newtonsoft.Json.Converters
+namespace Newtonsoft.Modified.Json.Converters
 {
     /// <summary>
     /// Converts a F# discriminated union type to and from JSON.

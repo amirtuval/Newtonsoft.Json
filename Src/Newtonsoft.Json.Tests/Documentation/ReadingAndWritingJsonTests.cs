@@ -32,8 +32,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.Modified.Json.Converters;
 #if !NETFX_CORE
 using NUnit.Framework;
 #else
@@ -41,13 +40,14 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Serialization;
+using Newtonsoft.Modified.Json.Tests.TestObjects;
+using Newtonsoft.Modified.Json.Utilities;
 using System.Globalization;
-using ErrorEventArgs = Newtonsoft.Json.Serialization.ErrorEventArgs;
+using Newtonsoft.Modified.Json.Linq;
+using ErrorEventArgs = Newtonsoft.Modified.Json.Serialization.ErrorEventArgs;
 
-namespace Newtonsoft.Json.Tests.Documentation
+namespace Newtonsoft.Modified.Json.Tests.Documentation
 {
     [TestFixture]
     public class ReadingAndWritingJsonTests : TestFixtureBase

@@ -33,7 +33,7 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Linq;
+using Newtonsoft.Modified.Json.Linq;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
@@ -41,7 +41,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Linq
+namespace Newtonsoft.Modified.Json.Tests.Linq
 {
     [TestFixture]
     public class JArrayTests : TestFixtureBase

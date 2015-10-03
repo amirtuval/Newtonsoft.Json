@@ -25,9 +25,9 @@
 
 using System;
 using System.Collections.Generic;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Utilities;
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace Newtonsoft.Modified.Json.Tests.TestObjects
 {
     public class ListOfIds<T> : JsonConverter where T : Bar, new()
     {

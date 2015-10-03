@@ -32,16 +32,16 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Schema;
-using Newtonsoft.Json.Linq;
 using System.IO;
-using Newtonsoft.Json.Tests.TestObjects;
+using Newtonsoft.Modified.Json.Linq;
+using Newtonsoft.Modified.Json.Schema;
+using Newtonsoft.Modified.Json.Tests.TestObjects;
 #if !(NETFX_CORE)
 using System.Data;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Schema
+namespace Newtonsoft.Modified.Json.Tests.Schema
 {
     [TestFixture]
     public class ExtensionsTests : TestFixtureBase

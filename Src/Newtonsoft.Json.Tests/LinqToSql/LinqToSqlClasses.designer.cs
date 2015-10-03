@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Newtonsoft.Json.Tests.LinqToSql
+namespace Newtonsoft.Modified.Json.Tests.LinqToSql
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -100,7 +100,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="")]
+	[Table(Name="")]
 	public partial class Person : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
@@ -139,7 +139,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", CanBeNull=false)]
+		[Column(Storage="_FirstName", CanBeNull=false)]
 		public string FirstName
 		{
 			get
@@ -159,7 +159,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", CanBeNull=false)]
+		[Column(Storage="_LastName", CanBeNull=false)]
 		public string LastName
 		{
 			get
@@ -179,7 +179,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PersonId", IsPrimaryKey=true)]
+		[Column(Storage="_PersonId", IsPrimaryKey=true)]
 		public System.Guid PersonId
 		{
 			get
@@ -199,7 +199,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DepartmentId")]
+		[Column(Storage="_DepartmentId")]
 		public System.Guid DepartmentId
 		{
 			get
@@ -223,7 +223,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Person_PersonRole", Storage="_PersonRoles", ThisKey="PersonId", OtherKey="PersonId")]
+		[Association(Name="Person_PersonRole", Storage="_PersonRoles", ThisKey="PersonId", OtherKey="PersonId")]
 		public EntitySet<PersonRole> PersonRoles
 		{
 			get
@@ -236,7 +236,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Department_Person", Storage="_Department", ThisKey="DepartmentId", OtherKey="DepartmentId", IsForeignKey=true)]
+		[Association(Name="Department_Person", Storage="_Department", ThisKey="DepartmentId", OtherKey="DepartmentId", IsForeignKey=true)]
 		public Department Department
 		{
 			get
@@ -303,7 +303,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="")]
+	[Table(Name="")]
 	public partial class Role : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
@@ -331,7 +331,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", CanBeNull=false)]
+		[Column(Storage="_Name", CanBeNull=false)]
 		public string Name
 		{
 			get
@@ -351,7 +351,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoleId", IsPrimaryKey=true)]
+		[Column(Storage="_RoleId", IsPrimaryKey=true)]
 		public System.Guid RoleId
 		{
 			get
@@ -371,7 +371,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Role_PersonRole", Storage="_PersonRoles", ThisKey="RoleId", OtherKey="RoleId")]
+		[Association(Name="Role_PersonRole", Storage="_PersonRoles", ThisKey="RoleId", OtherKey="RoleId")]
 		public EntitySet<PersonRole> PersonRoles
 		{
 			get
@@ -417,7 +417,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="")]
+	[Table(Name="")]
 	public partial class PersonRole : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
@@ -452,7 +452,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PersonId")]
+		[Column(Storage="_PersonId")]
 		public System.Guid PersonId
 		{
 			get
@@ -476,7 +476,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RoleId")]
+		[Column(Storage="_RoleId")]
 		public System.Guid RoleId
 		{
 			get
@@ -500,7 +500,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PersonRoleId", IsPrimaryKey=true)]
+		[Column(Storage="_PersonRoleId", IsPrimaryKey=true)]
 		public System.Guid PersonRoleId
 		{
 			get
@@ -520,7 +520,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Person_PersonRole", Storage="_Person", ThisKey="PersonId", OtherKey="PersonId", IsForeignKey=true)]
+		[Association(Name="Person_PersonRole", Storage="_Person", ThisKey="PersonId", OtherKey="PersonId", IsForeignKey=true)]
 		public Person Person
 		{
 			get
@@ -554,7 +554,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Role_PersonRole", Storage="_Role", ThisKey="RoleId", OtherKey="RoleId", IsForeignKey=true)]
+		[Association(Name="Role_PersonRole", Storage="_Role", ThisKey="RoleId", OtherKey="RoleId", IsForeignKey=true)]
 		public Role Role
 		{
 			get
@@ -609,7 +609,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="")]
+	[Table(Name="")]
 	public partial class Department : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
@@ -637,7 +637,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DepartmentId", IsPrimaryKey=true)]
+		[Column(Storage="_DepartmentId", IsPrimaryKey=true)]
 		public System.Guid DepartmentId
 		{
 			get
@@ -657,7 +657,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", CanBeNull=false)]
+		[Column(Storage="_Name", CanBeNull=false)]
 		public string Name
 		{
 			get
@@ -677,7 +677,7 @@ namespace Newtonsoft.Json.Tests.LinqToSql
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Department_Person", Storage="_Persons", ThisKey="DepartmentId", OtherKey="DepartmentId")]
+		[Association(Name="Department_Person", Storage="_Persons", ThisKey="DepartmentId", OtherKey="DepartmentId")]
 		public EntitySet<Person> Persons
 		{
 			get

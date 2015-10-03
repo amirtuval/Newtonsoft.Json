@@ -23,7 +23,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
-namespace Newtonsoft.Json.Schema
+namespace Newtonsoft.Modified.Json.Schema
 {
     /// <summary>
     /// Specifies undefined schema Id handling options for the <see cref="JsonSchemaGenerator"/>.

@@ -24,9 +24,9 @@
 #endregion
 
 using System.Globalization;
-using Newtonsoft.Json.Serialization;
+using Newtonsoft.Modified.Json.Serialization;
 
-namespace Newtonsoft.Json.Tests.TestObjects
+namespace Newtonsoft.Modified.Json.Tests.TestObjects
 {
     public class MetroPropertyNameResolver : DefaultContractResolver
     {

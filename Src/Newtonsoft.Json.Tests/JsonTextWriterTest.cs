@@ -42,12 +42,12 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json;
+using Newtonsoft.Modified.Json;
 using System.IO;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Converters;
+using Newtonsoft.Modified.Json.Utilities;
 
-namespace Newtonsoft.Json.Tests
+namespace Newtonsoft.Modified.Json.Tests
 {
     [TestFixture]
     public class JsonTextWriterTest : TestFixtureBase

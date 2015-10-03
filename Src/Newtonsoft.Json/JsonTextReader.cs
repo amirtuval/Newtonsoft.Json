@@ -33,9 +33,9 @@ using System.Text;
 using System.IO;
 using System.Xml;
 using System.Globalization;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Utilities;
 
-namespace Newtonsoft.Json
+namespace Newtonsoft.Modified.Json
 {
     internal enum ReadType
     {

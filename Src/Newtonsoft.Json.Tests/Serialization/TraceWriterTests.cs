@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.Modified.Json.Linq;
 #if !(NET20 || NET35 || PORTABLE || PORTABLE40)
 using System.Numerics;
 #endif
@@ -17,9 +17,9 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
+using Newtonsoft.Modified.Json.Converters;
+using Newtonsoft.Modified.Json.Serialization;
+using Newtonsoft.Modified.Json.Tests.TestObjects;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
@@ -27,7 +27,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace Newtonsoft.Modified.Json.Tests.Serialization
 {
     public class Staff
     {

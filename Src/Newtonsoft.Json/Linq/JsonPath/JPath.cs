@@ -27,9 +27,9 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Utilities;
 
-namespace Newtonsoft.Json.Linq.JsonPath
+namespace Newtonsoft.Modified.Json.Linq.JsonPath
 {
     internal class JPath
     {

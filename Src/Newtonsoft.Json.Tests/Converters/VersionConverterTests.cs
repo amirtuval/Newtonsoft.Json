@@ -24,7 +24,7 @@
 #endregion
 
 using System;
-using Newtonsoft.Json.Converters;
+using Newtonsoft.Modified.Json.Converters;
 #if !NETFX_CORE
 using NUnit.Framework;
 
@@ -34,7 +34,7 @@ using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestCl
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
 
-namespace Newtonsoft.Json.Tests.Converters
+namespace Newtonsoft.Modified.Json.Tests.Converters
 {
     public class VersionClass
     {

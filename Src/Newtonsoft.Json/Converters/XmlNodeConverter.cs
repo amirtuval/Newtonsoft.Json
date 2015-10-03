@@ -31,7 +31,7 @@ using System.Xml;
 #if !(NET20 || PORTABLE40)
 using System.Xml.Linq;
 #endif
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Utilities;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
@@ -39,7 +39,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Converters
+namespace Newtonsoft.Modified.Json.Converters
 {
     #region XmlNodeWrappers
 #if !NETFX_CORE && !PORTABLE && !PORTABLE40

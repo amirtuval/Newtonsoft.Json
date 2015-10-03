@@ -31,7 +31,7 @@ using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestCl
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
 
-namespace Newtonsoft.Json.Tests
+namespace Newtonsoft.Modified.Json.Tests
 {
     [TestFixture]
     public class JsonArrayAttributeTests : TestFixtureBase

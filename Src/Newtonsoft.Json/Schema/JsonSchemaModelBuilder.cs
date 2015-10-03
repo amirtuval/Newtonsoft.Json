@@ -31,7 +31,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Schema
+namespace Newtonsoft.Modified.Json.Schema
 {
     internal class JsonSchemaModelBuilder
     {

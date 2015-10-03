@@ -23,7 +23,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
-using Newtonsoft.Json.Schema;
+using Newtonsoft.Modified.Json.Schema;
 #if !NETFX_CORE
 using NUnit.Framework;
 
@@ -33,7 +33,7 @@ using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestCl
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
 
-namespace Newtonsoft.Json.Tests.Schema
+namespace Newtonsoft.Modified.Json.Tests.Schema
 {
     [TestFixture]
     public class JsonSchemaModelBuilderTests : TestFixtureBase

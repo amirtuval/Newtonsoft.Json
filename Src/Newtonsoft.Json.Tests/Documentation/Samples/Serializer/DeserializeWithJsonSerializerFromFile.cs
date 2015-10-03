@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using File = System.IO.File;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Serializer
+namespace Newtonsoft.Modified.Json.Tests.Documentation.Samples.Serializer
 {
     public class DeserializeWithJsonSerializerFromFile
     {

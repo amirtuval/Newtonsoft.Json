@@ -23,14 +23,14 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
-using Newtonsoft.Json.Serialization;
+using Newtonsoft.Modified.Json.Converters;
+using Newtonsoft.Modified.Json.Serialization;
 #if !(NET35 || NET20 || NETFX_CORE || PORTABLE || PORTABLE40)
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
-using Newtonsoft.Json.Converters;
 #if !NETFX_CORE
 using NUnit.Framework;
 
@@ -40,7 +40,7 @@ using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestCl
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace Newtonsoft.Modified.Json.Tests.Serialization
 {
     [TestFixture]
     public class EntitiesSerializationTests : TestFixtureBase

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Serializer
+namespace Newtonsoft.Modified.Json.Tests.Documentation.Samples.Serializer
 {
     public class DeserializeConstructorHandling
     {

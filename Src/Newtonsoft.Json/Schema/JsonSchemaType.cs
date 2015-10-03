@@ -25,7 +25,7 @@
 
 using System;
 
-namespace Newtonsoft.Json.Schema
+namespace Newtonsoft.Modified.Json.Schema
 {
     /// <summary>
     /// The value types allowed by the <see cref="JsonSchema"/>.

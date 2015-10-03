@@ -25,8 +25,9 @@
 
 using System.IO;
 using System.Text;
-using Newtonsoft.Json.Bson;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.Modified.Json.Bson;
+using Newtonsoft.Modified.Json.Linq;
+using Newtonsoft.Modified.Json.Tests.TestObjects;
 #if !(NETFX_CORE || PORTABLE || PORTABLE40)
 using System;
 using System.Collections.Generic;
@@ -40,9 +41,8 @@ using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAtt
 #if !NETFX_CORE
 using System.Data;
 #endif
-using Newtonsoft.Json.Tests.TestObjects;
 
-namespace Newtonsoft.Json.Tests.Converters
+namespace Newtonsoft.Modified.Json.Tests.Converters
 {
     public class DataTableConverterTests : TestFixtureBase
     {

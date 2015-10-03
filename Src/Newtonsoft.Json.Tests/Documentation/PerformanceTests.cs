@@ -34,8 +34,7 @@ using System.Net;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.Modified.Json.Linq;
 #if !NETFX_CORE
 using NUnit.Framework;
 #else
@@ -43,12 +42,13 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Tests.TestObjects;
+using Newtonsoft.Modified.Json.Utilities;
 using System.Globalization;
+using Newtonsoft.Modified.Json.Converters;
+using Newtonsoft.Modified.Json.Serialization;
 
-namespace Newtonsoft.Json.Tests.Documentation
+namespace Newtonsoft.Modified.Json.Tests.Documentation
 {
     public class HttpClient
     {

@@ -27,9 +27,6 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
@@ -43,9 +40,12 @@ using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestCl
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
 using System.IO;
-using ErrorEventArgs = Newtonsoft.Json.Serialization.ErrorEventArgs;
+using Newtonsoft.Modified.Json.Converters;
+using Newtonsoft.Modified.Json.Serialization;
+using Newtonsoft.Modified.Json.Tests.TestObjects;
+using ErrorEventArgs = Newtonsoft.Modified.Json.Serialization.ErrorEventArgs;
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace Newtonsoft.Modified.Json.Tests.Serialization
 {
     [TestFixture]
     public class SerializationErrorHandlingTests : TestFixtureBase
@@ -268,7 +268,7 @@ namespace Newtonsoft.Json.Tests.Serialization
 
             JsonSerializer serializer = JsonSerializer.Create(new JsonSerializerSettings
             {
-                Error = delegate(object sender, ErrorEventArgs args)
+                Error = delegate(object sender, Json.Serialization.ErrorEventArgs args)
                 {
                     errors.Add(args.ErrorContext.Path + " - " + args.ErrorContext.Member + " - " + args.ErrorContext.Error.Message);
                     args.ErrorContext.Handled = true;
@@ -381,7 +381,7 @@ namespace Newtonsoft.Json.Tests.Serialization
             try
             {
                 JsonSerializer serializer = new JsonSerializer();
-                serializer.Error += delegate(object sender, ErrorEventArgs args)
+                serializer.Error += delegate(object sender, Json.Serialization.ErrorEventArgs args)
                 {
                     // only log an error once
                     if (args.CurrentObject == args.ErrorContext.OriginalObject)
@@ -408,7 +408,7 @@ namespace Newtonsoft.Json.Tests.Serialization
             List<string> errors = new List<string>();
             JsonSerializer serializer = new JsonSerializer();
             serializer.MetadataPropertyHandling = MetadataPropertyHandling.Default;
-            serializer.Error += delegate(object sender, ErrorEventArgs args)
+            serializer.Error += delegate(object sender, Json.Serialization.ErrorEventArgs args)
             {
                 errors.Add(args.ErrorContext.Path + " - " + args.ErrorContext.Member + " - " + args.ErrorContext.Error.Message);
                 args.ErrorContext.Handled = true;
@@ -428,7 +428,7 @@ namespace Newtonsoft.Json.Tests.Serialization
             List<string> errors = new List<string>();
 
             JsonSerializer serializer = new JsonSerializer();
-            serializer.Error += delegate(object sender, ErrorEventArgs args)
+            serializer.Error += delegate(object sender, Json.Serialization.ErrorEventArgs args)
             {
                 errors.Add(args.ErrorContext.Path + " - " + args.ErrorContext.Member + " - " + args.ErrorContext.Error.Message);
                 args.ErrorContext.Handled = true;
@@ -449,7 +449,7 @@ namespace Newtonsoft.Json.Tests.Serialization
             List<string> errors = new List<string>();
 
             JsonSerializer serializer = new JsonSerializer();
-            serializer.Error += delegate(object sender, ErrorEventArgs args)
+            serializer.Error += delegate(object sender, Json.Serialization.ErrorEventArgs args)
             {
                 errors.Add(args.ErrorContext.Path + " - " + args.ErrorContext.Member + " - " + args.ErrorContext.Error.Message);
                 args.ErrorContext.Handled = true;

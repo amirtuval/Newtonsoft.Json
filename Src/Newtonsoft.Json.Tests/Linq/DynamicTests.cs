@@ -32,7 +32,6 @@ using System.Linq;
 using System.Numerics;
 #endif
 using System.Text;
-using Newtonsoft.Json.Linq;
 #if !NETFX_CORE
 using NUnit.Framework;
 #else
@@ -40,10 +39,11 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Utilities;
 using System.Globalization;
+using Newtonsoft.Modified.Json.Linq;
 
-namespace Newtonsoft.Json.Tests.Linq
+namespace Newtonsoft.Modified.Json.Tests.Linq
 {
     [TestFixture]
     public class DynamicTests : TestFixtureBase

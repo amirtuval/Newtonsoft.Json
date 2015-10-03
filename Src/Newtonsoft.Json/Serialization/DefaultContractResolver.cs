@@ -40,10 +40,10 @@ using System.Runtime.Serialization;
 using System.Security.Permissions;
 #endif
 using System.Xml.Serialization;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Utilities;
-using Newtonsoft.Json.Linq;
 using System.Runtime.CompilerServices;
+using Newtonsoft.Modified.Json.Converters;
+using Newtonsoft.Modified.Json.Linq;
+using Newtonsoft.Modified.Json.Utilities;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
@@ -51,7 +51,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Serialization
+namespace Newtonsoft.Modified.Json.Serialization
 {
     internal struct ResolverContractKey : IEquatable<ResolverContractKey>
     {
@@ -145,7 +145,7 @@ namespace Newtonsoft.Json.Serialization
         /// Gets or sets the default members search flags.
         /// </summary>
         /// <value>The default members search flags.</value>
-        [ObsoleteAttribute("DefaultMembersSearchFlags is obsolete. To modify the members serialized inherit from DefaultContractResolver and override the GetSerializableMembers method instead.")] 
+        [Obsolete("DefaultMembersSearchFlags is obsolete. To modify the members serialized inherit from DefaultContractResolver and override the GetSerializableMembers method instead.")] 
         public BindingFlags DefaultMembersSearchFlags { get; set; }
 #else
         private BindingFlags DefaultMembersSearchFlags = BindingFlags.Instance | BindingFlags.Public;

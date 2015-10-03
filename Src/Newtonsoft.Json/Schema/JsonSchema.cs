@@ -26,11 +26,11 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Utilities;
 using System.Globalization;
+using Newtonsoft.Modified.Json.Linq;
+using Newtonsoft.Modified.Json.Utilities;
 
-namespace Newtonsoft.Json.Schema
+namespace Newtonsoft.Modified.Json.Schema
 {
     /// <summary>
     /// An in-memory representation of a JSON Schema.

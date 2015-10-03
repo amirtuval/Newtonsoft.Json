@@ -34,9 +34,9 @@ using global::Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = global::Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = global::Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using global::Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Utilities;
 
-namespace Newtonsoft.Json.Tests.Utilities
+namespace Newtonsoft.Modified.Json.Tests.Utilities
 {
     [TestFixture]
     public class ReflectionUtilsTests : TestFixtureBase

@@ -25,13 +25,13 @@
 
 using System.Collections.Generic;
 using System.Globalization;
-using Newtonsoft.Json.Utilities;
+using Newtonsoft.Modified.Json.Utilities;
+using Newtonsoft.Modified.Json.Serialization;
 #if !(NETFX_CORE || PORTABLE40 || PORTABLE)
 using System;
 using System.Data;
-using Newtonsoft.Json.Serialization;
 
-namespace Newtonsoft.Json.Converters
+namespace Newtonsoft.Modified.Json.Converters
 {
     /// <summary>
     /// Converts a <see cref="DataTable"/> to and from JSON.

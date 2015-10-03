@@ -5,10 +5,10 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using NUnit.Framework;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Schema;
+using Newtonsoft.Modified.Json.Linq;
+using Newtonsoft.Modified.Json.Schema;
 
-namespace Newtonsoft.Json.Tests.Schema
+namespace Newtonsoft.Modified.Json.Tests.Schema
 {
     public class JsonSchemaSpecTest
     {
@@ -29,7 +29,7 @@ namespace Newtonsoft.Json.Tests.Schema
     [TestFixture]
     public class JsonSchemaSpecTests : TestFixtureBase
     {
-        [TestCaseSourceAttribute("GetSpecTestDetails")]
+        [TestCaseSource("GetSpecTestDetails")]
         public void SpecTest(JsonSchemaSpecTest jsonSchemaSpecTest)
         {
             //if (jsonSchemaSpecTest.ToString() == "enum.json - simple enum validation - something else is invalid")

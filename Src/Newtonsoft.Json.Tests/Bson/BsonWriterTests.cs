@@ -37,12 +37,12 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Bson;
 using System.IO;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Utilities;
-using Newtonsoft.Json.Tests.TestObjects;
+using Newtonsoft.Modified.Json.Utilities;
 using System.Globalization;
+using Newtonsoft.Modified.Json.Bson;
+using Newtonsoft.Modified.Json.Linq;
+using Newtonsoft.Modified.Json.Tests.TestObjects;
 #if NET20
 using Newtonsoft.Json.Utilities.LinqBridge;
 #else
@@ -50,7 +50,7 @@ using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Tests.Bson
+namespace Newtonsoft.Modified.Json.Tests.Bson
 {
     [TestFixture]
     public class BsonWriterTests : TestFixtureBase

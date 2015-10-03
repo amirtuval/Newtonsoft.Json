@@ -42,12 +42,12 @@ using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAtt
 #endif
 using System.Xml;
 using System.Xml.Schema;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Schema;
-using Newtonsoft.Json.Utilities;
-using ValidationEventArgs = Newtonsoft.Json.Schema.ValidationEventArgs;
+using Newtonsoft.Modified.Json.Utilities;
+using Newtonsoft.Modified.Json.Linq;
+using Newtonsoft.Modified.Json.Schema;
+using ValidationEventArgs = Newtonsoft.Modified.Json.Schema.ValidationEventArgs;
 
-namespace Newtonsoft.Json.Tests
+namespace Newtonsoft.Modified.Json.Tests
 {
     [TestFixture]
     public class JsonValidatingReaderTests : TestFixtureBase
@@ -715,7 +715,7 @@ namespace Newtonsoft.Json.Tests
 
             JArray a = new JArray(new JValue(new BigInteger(0)));
 
-            ValidationEventArgs validationEventArgs = null;
+            Json.Schema.ValidationEventArgs validationEventArgs = null;
 
             a.Validate(JsonSchema.Parse(schemaJson), (sender, args) => { validationEventArgs = args; });
 
@@ -1575,7 +1575,7 @@ namespace Newtonsoft.Json.Tests
   }
 }";
 
-            IList<ValidationEventArgs> validationEventArgs = new List<ValidationEventArgs>();
+            IList<Json.Schema.ValidationEventArgs> validationEventArgs = new List<Json.Schema.ValidationEventArgs>();
 
             JsonValidatingReader reader = new JsonValidatingReader(new JsonTextReader(new StringReader(json)));
             reader.ValidationEventHandler += (sender, args) => { validationEventArgs.Add(args); };

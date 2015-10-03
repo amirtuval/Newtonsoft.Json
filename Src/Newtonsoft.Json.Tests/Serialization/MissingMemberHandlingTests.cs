@@ -25,8 +25,8 @@
 
 using System;
 using System.IO;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Tests.TestObjects;
+using Newtonsoft.Modified.Json.Converters;
+using Newtonsoft.Modified.Json.Tests.TestObjects;
 #if !NETFX_CORE
 using NUnit.Framework;
 
@@ -36,7 +36,7 @@ using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestCl
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
 
-namespace Newtonsoft.Json.Tests.Serialization
+namespace Newtonsoft.Modified.Json.Tests.Serialization
 {
     [TestFixture]
     public class MissingMemberHandlingTests : TestFixtureBase

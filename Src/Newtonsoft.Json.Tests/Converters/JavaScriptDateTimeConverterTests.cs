@@ -32,11 +32,11 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using TestFixture = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute;
 using Test = Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestMethodAttribute;
 #endif
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Tests.Serialization;
-using Newtonsoft.Json.Tests.TestObjects;
+using Newtonsoft.Modified.Json.Tests.Serialization;
+using Newtonsoft.Modified.Json.Converters;
+using Newtonsoft.Modified.Json.Tests.TestObjects;
 
-namespace Newtonsoft.Json.Tests.Converters
+namespace Newtonsoft.Modified.Json.Tests.Converters
 {
     [TestFixture]
     public class JavaScriptDateTimeConverterTests : TestFixtureBase

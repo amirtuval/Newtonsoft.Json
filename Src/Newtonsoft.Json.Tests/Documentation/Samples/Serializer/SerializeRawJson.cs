@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Newtonsoft.Json.Linq;
+using Newtonsoft.Modified.Json.Linq;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Serializer
+namespace Newtonsoft.Modified.Json.Tests.Documentation.Samples.Serializer
 {
     public class SerializeRawJson
     {

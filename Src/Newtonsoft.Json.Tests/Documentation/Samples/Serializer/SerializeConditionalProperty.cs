@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Newtonsoft.Json.Tests.Documentation.Samples.Serializer
+namespace Newtonsoft.Modified.Json.Tests.Documentation.Samples.Serializer
 {
     public class SerializeConditionalProperty
     {
